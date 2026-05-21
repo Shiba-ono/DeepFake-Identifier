@@ -6,7 +6,7 @@ A binary image classifier built with PyTorch that distinguishes real human faces
 
 This project fine-tunes a pretrained EfficientNet-B0 model on a 140k image dataset of real and AI-generated faces. The goal was to explore machine learning fundamentals — transfer learning, data augmentation, model evaluation, and the real-world limitations of benchmark accuracy.
 
-Key Learnings
+## Key Learnings
 
 Achieved 100% test accuracy on in-distribution data
 Diagnosed distribution shift as the root cause of failure on modern high-quality deepfakes — the model learned compression artifacts specific to the training dataset rather than generalisable fake-face features
