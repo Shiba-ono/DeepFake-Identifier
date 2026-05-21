@@ -45,7 +45,7 @@ Dataset bias: Low file size (~30kb) and resolution of training fakes means the m
 Generalisation: This reflects a broader unsolved problem in deepfake detection — models trained on one generator rarely transfer well to another.
 
 
-Inference
+## Inference
 Run the inference cell in the notebook to test a single image:
 pythonfrom PIL import Image
 
@@ -66,7 +66,7 @@ print(f"Real: {real_prob:.1%} | Fake: {fake_prob:.1%}")
 Class indices are assigned alphabetically by ImageFolder: fake=0, real=1. Verify with print(train_ds.class_to_idx).
 
 
-References
+## References
 
 EfficientNet: Tan, M., & Le, Q. V. (2019). EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks. ICML. https://arxiv.org/abs/1905.11946
 StyleGAN (fake face generator used in dataset): Karras, T., Laine, S., & Aila, T. (2019). A Style-Based Generator Architecture for Generative Adversarial Networks. CVPR. https://arxiv.org/abs/1812.04948
