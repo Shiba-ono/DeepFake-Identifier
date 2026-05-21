@@ -53,8 +53,3 @@ Dataset on Kaggle: xhlulu. (2020). 140k Real and Fake Faces. Kaggle. https://www
 PyTorch: Paszke, A., et al. (2019). PyTorch: An Imperative Style, High-Performance Deep Learning Library. NeurIPS. https://arxiv.org/abs/1912.01703
 AdamW Optimiser: Loshchilov, I., & Hutter, F. (2019). Decoupled Weight Decay Regularization. ICLR. https://arxiv.org/abs/1711.05101
 
-
-## Author
-Valen Christino
-Final year Cyber Security Student, Asia Pacific University
-LinkedIn | valenchristino6@gmail.com
