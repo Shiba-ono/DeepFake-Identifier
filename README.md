@@ -44,28 +44,6 @@ Distribution shift: The model was trained on StyleGAN-generated faces from ~2020
 Dataset bias: Low file size (~30kb) and resolution of training fakes means the model likely learned compression artifacts rather than semantic fakeness.
 Generalisation: This reflects a broader unsolved problem in deepfake detection — models trained on one generator rarely transfer well to another.
 
-
-## Inference
-Run the inference cell in the notebook to test a single image:
-pythonfrom PIL import Image
-
-path = r"path/to/your/image.jpg"
-img = Image.open(path).convert("RGB")
-
-tensor = val_transforms(img).unsqueeze(0).to(DEVICE)
-model.load_state_dict(torch.load("best_model.pth", map_location=DEVICE))
-model.eval()
-
-with torch.no_grad():
-    probs = torch.softmax(model(tensor), dim=1)[0]
-
-fake_prob, real_prob = probs[0].item(), probs[1].item()
-print("REAL" if real_prob >= 0.5 else "FAKE")
-print(f"Real: {real_prob:.1%} | Fake: {fake_prob:.1%}")
-
-Class indices are assigned alphabetically by ImageFolder: fake=0, real=1. Verify with print(train_ds.class_to_idx).
-
-
 ## References
 
 EfficientNet: Tan, M., & Le, Q. V. (2019). EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks. ICML. https://arxiv.org/abs/1905.11946
